@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://b2rdb3ooqbg2m"]
+
+[ext_resource type="Texture2D" uid="uid://c6fpy7hovvt31" path="res://assets/hotbar_background.png" id="1_246dg"]
+[ext_resource type="Script" uid="uid://bt431gvv6inn3" path="res://scenes/inventory_screen.gd" id="1_bt7as"]
+[ext_resource type="Texture2D" uid="uid://dn7irjtbkwfdf" path="res://assets/inventory_slot_selected.png" id="3_qji5t"]
+
+[node name="InventoryScreen" type="Node2D" unique_id=605690316]
+script = ExtResource("1_bt7as")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2126633000]
+offset_left = 181.0
+offset_top = 319.0
+offset_right = 543.0
+offset_bottom = 398.0
+texture = ExtResource("1_246dg")
+
+[node name="InventorySlots" type="GridContainer" parent="." unique_id=61501373]
+offset_left = 187.0
+offset_top = 326.0
+offset_right = 535.0
+offset_bottom = 390.0
+theme_override_constants/h_separation = 7
+columns = 5
+
+[node name="InventorySlot1" type="Panel" parent="InventorySlots" unique_id=1389454901]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="InventorySlots/InventorySlot1" unique_id=392451651]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="Highlight" type="TextureRect" parent="InventorySlots/InventorySlot1" unique_id=741137164]
+visible = false
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("3_qji5t")
+
+[node name="InventorySlot2" type="Panel" parent="InventorySlots" unique_id=1922298592]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="InventorySlots/InventorySlot2" unique_id=788027530]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="Highlight" type="TextureRect" parent="InventorySlots/InventorySlot2" unique_id=1716105395]
+visible = false
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("3_qji5t")
+
+[node name="InventorySlot3" type="Panel" parent="InventorySlots" unique_id=1957753870]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="InventorySlots/InventorySlot3" unique_id=1093316606]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="Highlight" type="TextureRect" parent="InventorySlots/InventorySlot3" unique_id=546560671]
+visible = false
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("3_qji5t")
+
+[node name="InventorySlot4" type="Panel" parent="InventorySlots" unique_id=808132215]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="InventorySlots/InventorySlot4" unique_id=1715829841]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 63.0
+
+[node name="Highlight" type="TextureRect" parent="InventorySlots/InventorySlot4" unique_id=580110560]
+visible = false
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("3_qji5t")
+
+[node name="InventorySlot5" type="Panel" parent="InventorySlots" unique_id=1670890676]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="InventorySlots/InventorySlot5" unique_id=471116252]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="Highlight" type="TextureRect" parent="InventorySlots/InventorySlot5" unique_id=1439459287]
+visible = false
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("3_qji5t")

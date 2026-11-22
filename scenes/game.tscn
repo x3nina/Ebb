@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://dxrm5ootq8e01" path="res://scripts/dual_grid_manager.gd" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://da66p8lt38se4" path="res://assets/tiles_sprite.png" id="3_lbhrr"]
 [ext_resource type="Script" uid="uid://6vpmau2gu6c0" path="res://scripts/test_dual_grid.gd" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://d03jffnkx4xnx" path="res://scenes/bannana.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://b2rdb3ooqbg2m" path="res://scenes/inventory_screen.tscn" id="6_p57ef"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
 texture = ExtResource("3_lbhrr")
@@ -637,7 +639,7 @@ sources/0 = SubResource("TileSetAtlasSource_iywne")
 
 [node name="Game" type="Node2D" unique_id=1131940229]
 
-[node name="Player" parent="." unique_id=392926411 instance=ExtResource("1_uwrxv")]
+[node name="Player" parent="." unique_id=392926411 groups=["player"] instance=ExtResource("1_uwrxv")]
 position = Vector2(158, 120)
 slide_on_ceiling = false
 
@@ -651,3 +653,26 @@ script = ExtResource("4_lbhrr")
 [node name="DualGridManager" type="Node2D" parent="TestDualGrid" unique_id=654391212]
 script = ExtResource("2_lnu2h")
 tile_set = SubResource("TileSet_yqjtg")
+
+[node name="Bannana" parent="." unique_id=1440496427 instance=ExtResource("5_iywne")]
+position = Vector2(969, 311)
+
+[node name="Bannana2" parent="." unique_id=1607724057 instance=ExtResource("5_iywne")]
+position = Vector2(483, 142)
+
+[node name="Bannana3" parent="." unique_id=1047330820 instance=ExtResource("5_iywne")]
+position = Vector2(211, 370)
+
+[node name="Bannana4" parent="." unique_id=593445029 instance=ExtResource("5_iywne")]
+position = Vector2(111, 264)
+
+[node name="Bannana5" parent="." unique_id=717692056 instance=ExtResource("5_iywne")]
+position = Vector2(430, 376)
+
+[node name="Bannana6" parent="." unique_id=983258120 instance=ExtResource("5_iywne")]
+position = Vector2(664, 281)
+
+[node name="User interface" type="CanvasLayer" parent="." unique_id=23504465]
+
+[node name="InventoryScreen" parent="User interface" unique_id=605690316 groups=["inventoryUI"] instance=ExtResource("6_p57ef")]
+position = Vector2(601, 493)

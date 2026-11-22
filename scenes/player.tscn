@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://oqv4bah6och" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://b1h5ourcd77p1" path="res://assets/player_anim_sprite.png" id="2_g2els"]
+[ext_resource type="Script" uid="uid://dpsntqb7s0bjx" path="res://scripts/player_inventory.gd" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("2_g2els")
@@ -79,8 +80,12 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vphp3"]
+size = Vector2(52, 69)
+
 [node name="Player" type="CharacterBody2D" unique_id=392926411]
 z_index = 5
+collision_layer = 2
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1849342680]
@@ -89,3 +94,10 @@ sprite_frames = SubResource("SpriteFrames_5nemx")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.46975902
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=180343247]
+position = Vector2(0, -45.5)
+shape = SubResource("RectangleShape2D_vphp3")
+
+[node name="Inventory" type="Node" parent="." unique_id=623885869]
+script = ExtResource("3_qhqgy")
