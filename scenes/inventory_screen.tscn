@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b2rdb3ooqbg2m"]
 
 [ext_resource type="Texture2D" uid="uid://c6fpy7hovvt31" path="res://assets/hotbar_background.png" id="1_246dg"]
-[ext_resource type="Script" uid="uid://bt431gvv6inn3" path="res://scenes/inventory_screen.gd" id="1_bt7as"]
+[ext_resource type="Script" uid="uid://bt431gvv6inn3" path="res://scripts/inventory_screen.gd" id="1_bt7as"]
 [ext_resource type="Texture2D" uid="uid://dn7irjtbkwfdf" path="res://assets/inventory_slot_selected.png" id="3_qji5t"]
 
 [node name="InventoryScreen" type="Node2D" unique_id=605690316]
