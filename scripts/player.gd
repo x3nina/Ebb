@@ -46,5 +46,8 @@ func _input(event):
 			selected_slot = 4
 		inventory_ui.select_item(selected_slot);
 		if event.keycode == KEY_G:
-			inventory.drop_item(selected_slot)
+			
+			inventory.drop_item(selected_slot,global_position)
 			print("drop item")
+		if event.keycode == KEY_Q:
+			inventory.throw_item(selected_slot);

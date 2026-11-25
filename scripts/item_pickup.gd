@@ -1,6 +1,12 @@
 extends Area2D
 @export var item: Item
+@onready var icon_sprite: Sprite2D = $SpriteIcon
 
+
+
+func _ready() -> void:
+	ItemIcons.register_from_sprite(item.item_ID,icon_sprite)
+	
 
 
 func _on_body_entered(body: Node2D) -> void:

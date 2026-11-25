@@ -7,11 +7,11 @@ extends Node2D
 @onready var inventory = player.get_node("Inventory")
 
 
-func update_inventory(index) -> void:
+func update_inventory(index: int, item_ID: int) -> void:
 	var current_slot = inventory_slots[index]
 	var texture_rect = current_slot.get_node("TextureRect")
 	if(inventory.inventory_array[index] != null):
-		texture_rect.texture = inventory.inventory_array[index].icon
+		texture_rect.texture = ItemIcons.get_icon(item_ID)
 	else:
 		texture_rect.texture = null
 

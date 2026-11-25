@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b8qqby5ebiiym"]
+
+[ext_resource type="Script" uid="uid://c8th2blkoww7a" path="res://scripts/item_pickup.gd" id="1_h8w7v"]
+[ext_resource type="Script" uid="uid://bcw1wigdrttht" path="res://scripts/item_data.gd" id="2_qoyyq"]
+[ext_resource type="Texture2D" uid="uid://bp7txf1wvrnxt" path="res://assets/items_sprite.png" id="3_3k14j"]
+
+[sub_resource type="Resource" id="Resource_h8w7v"]
+script = ExtResource("2_qoyyq")
+item_ID = 2
+item_name = "Apple"
+path_to_scene = "res://scenes/Apple.tscn"
+metadata/_custom_type_script = "uid://bcw1wigdrttht"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qoyyq"]
+radius = 16.0
+
+[node name="Apple" type="Area2D" unique_id=1440496427]
+collision_mask = 2
+script = ExtResource("1_h8w7v")
+item = SubResource("Resource_h8w7v")
+
+[node name="SpriteIcon" type="Sprite2D" parent="." unique_id=1200569205]
+texture = ExtResource("3_3k14j")
+region_enabled = true
+region_rect = Rect2(74, 4, 44, 53)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1527151940]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_qoyyq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://nuf0mx1axldv"]
+
+[ext_resource type="Script" uid="uid://c8th2blkoww7a" path="res://scripts/item_pickup.gd" id="1_emwc0"]
+[ext_resource type="Script" uid="uid://bcw1wigdrttht" path="res://scripts/item_data.gd" id="2_137t8"]
+[ext_resource type="Texture2D" uid="uid://bp7txf1wvrnxt" path="res://assets/items_sprite.png" id="3_q2db8"]
+
+[sub_resource type="Resource" id="Resource_emwc0"]
+script = ExtResource("2_137t8")
+item_ID = 3
+item_name = "Bottle"
+path_to_scene = "res://scenes/bottle.tscn"
+metadata/_custom_type_script = "uid://bcw1wigdrttht"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_emwc0"]
+radius = 12.0415945
+
+[node name="Bottle" type="Area2D" unique_id=1440496427]
+collision_mask = 2
+script = ExtResource("1_emwc0")
+item = SubResource("Resource_emwc0")
+
+[node name="SpriteIcon" type="Sprite2D" parent="." unique_id=1200569205]
+texture = ExtResource("3_q2db8")
+region_enabled = true
+region_rect = Rect2(84, 70, 25, 53)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1527151940]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_emwc0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

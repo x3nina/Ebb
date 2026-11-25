@@ -5,7 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://da66p8lt38se4" path="res://assets/tiles_sprite.png" id="3_lbhrr"]
 [ext_resource type="Script" uid="uid://6vpmau2gu6c0" path="res://scripts/test_dual_grid.gd" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://d03jffnkx4xnx" path="res://scenes/bannana.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://b8qqby5ebiiym" path="res://scenes/Apple.tscn" id="6_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://b2rdb3ooqbg2m" path="res://scenes/inventory_screen.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://nuf0mx1axldv" path="res://scenes/bottle.tscn" id="7_vtaks"]
+[ext_resource type="PackedScene" uid="uid://inlud6kq2kw2" path="res://scenes/can.tscn" id="8_kvpfn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
 texture = ExtResource("3_lbhrr")
@@ -654,23 +657,26 @@ script = ExtResource("4_lbhrr")
 script = ExtResource("2_lnu2h")
 tile_set = SubResource("TileSet_yqjtg")
 
-[node name="Bannana" parent="." unique_id=1440496427 instance=ExtResource("5_iywne")]
-position = Vector2(969, 311)
+[node name="Bannana" parent="TestDualGrid" unique_id=1440496427 instance=ExtResource("5_iywne")]
+position = Vector2(374, 217)
 
-[node name="Bannana2" parent="." unique_id=1607724057 instance=ExtResource("5_iywne")]
-position = Vector2(483, 142)
+[node name="Bannana2" parent="TestDualGrid" unique_id=1334331056 instance=ExtResource("5_iywne")]
+position = Vector2(664, 261)
 
-[node name="Bannana3" parent="." unique_id=1047330820 instance=ExtResource("5_iywne")]
-position = Vector2(211, 370)
+[node name="Apple" parent="TestDualGrid" unique_id=248288143 instance=ExtResource("6_0tnpc")]
+position = Vector2(634, 455)
 
-[node name="Bannana4" parent="." unique_id=593445029 instance=ExtResource("5_iywne")]
-position = Vector2(111, 264)
+[node name="Can" parent="TestDualGrid" unique_id=1548977245 instance=ExtResource("8_kvpfn")]
+position = Vector2(360, 400)
 
-[node name="Bannana5" parent="." unique_id=717692056 instance=ExtResource("5_iywne")]
-position = Vector2(430, 376)
+[node name="Can2" parent="TestDualGrid" unique_id=1593582483 instance=ExtResource("8_kvpfn")]
+position = Vector2(785, 140)
 
-[node name="Bannana6" parent="." unique_id=983258120 instance=ExtResource("5_iywne")]
-position = Vector2(664, 281)
+[node name="Can3" parent="TestDualGrid" unique_id=257883342 instance=ExtResource("8_kvpfn")]
+position = Vector2(443, 509)
+
+[node name="Bottle" parent="TestDualGrid" unique_id=1999502804 instance=ExtResource("7_vtaks")]
+position = Vector2(264, 474)
 
 [node name="User interface" type="CanvasLayer" parent="." unique_id=23504465]
 
