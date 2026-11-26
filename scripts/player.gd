@@ -46,8 +46,13 @@ func _input(event):
 			selected_slot = 4
 		inventory_ui.select_item(selected_slot);
 		if event.keycode == KEY_G:
-			
-			inventory.drop_item(selected_slot,global_position)
-			print("drop item")
+			#ignore input, if slot is null, otherwise game will go boom :(
+			if(inventory.inventory_array[selected_slot] != null):
+				inventory.drop_item(selected_slot,global_position)
+				print("drop item")
 		if event.keycode == KEY_Q:
-			inventory.throw_item(selected_slot);
+			var mouse_position = get_global_mouse_position()
+			#ignore input, if slot is null, otherwise game will go boom :(
+			if(inventory.inventory_array[selected_slot] != null):
+				inventory.throw_item(selected_slot,global_position,mouse_position);
+			

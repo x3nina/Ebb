@@ -2,7 +2,24 @@
 
 [ext_resource type="Texture2D" uid="uid://c6fpy7hovvt31" path="res://assets/hotbar_background.png" id="1_246dg"]
 [ext_resource type="Script" uid="uid://bt431gvv6inn3" path="res://scripts/inventory_screen.gd" id="1_bt7as"]
+[ext_resource type="Texture2D" uid="uid://bp7txf1wvrnxt" path="res://assets/items_sprite.png" id="3_nim2i"]
 [ext_resource type="Texture2D" uid="uid://dn7irjtbkwfdf" path="res://assets/inventory_slot_selected.png" id="3_qji5t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_21f6s"]
+texture = ExtResource("3_nim2i")
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5s2m6"]
+texture = ExtResource("3_nim2i")
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8whxn"]
+texture = ExtResource("3_nim2i")
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qq4uu"]
+texture = ExtResource("3_nim2i")
+region_rect = Rect2(0, 0, 64, 64)
 
 [node name="InventoryScreen" type="Node2D" unique_id=605690316]
 script = ExtResource("1_bt7as")
@@ -25,11 +42,14 @@ columns = 5
 [node name="InventorySlot1" type="Panel" parent="InventorySlots" unique_id=1389454901]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_21f6s")
 
 [node name="TextureRect" type="TextureRect" parent="InventorySlots/InventorySlot1" unique_id=392451651]
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Highlight" type="TextureRect" parent="InventorySlots/InventorySlot1" unique_id=741137164]
 visible = false
@@ -41,11 +61,13 @@ texture = ExtResource("3_qji5t")
 [node name="InventorySlot2" type="Panel" parent="InventorySlots" unique_id=1922298592]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_5s2m6")
 
 [node name="TextureRect" type="TextureRect" parent="InventorySlots/InventorySlot2" unique_id=788027530]
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
+stretch_mode = 5
 
 [node name="Highlight" type="TextureRect" parent="InventorySlots/InventorySlot2" unique_id=1716105395]
 visible = false
@@ -57,11 +79,13 @@ texture = ExtResource("3_qji5t")
 [node name="InventorySlot3" type="Panel" parent="InventorySlots" unique_id=1957753870]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8whxn")
 
 [node name="TextureRect" type="TextureRect" parent="InventorySlots/InventorySlot3" unique_id=1093316606]
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
+stretch_mode = 5
 
 [node name="Highlight" type="TextureRect" parent="InventorySlots/InventorySlot3" unique_id=546560671]
 visible = false
@@ -73,11 +97,13 @@ texture = ExtResource("3_qji5t")
 [node name="InventorySlot4" type="Panel" parent="InventorySlots" unique_id=808132215]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qq4uu")
 
 [node name="TextureRect" type="TextureRect" parent="InventorySlots/InventorySlot4" unique_id=1715829841]
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 63.0
+stretch_mode = 5
 
 [node name="Highlight" type="TextureRect" parent="InventorySlots/InventorySlot4" unique_id=580110560]
 visible = false
@@ -89,11 +115,13 @@ texture = ExtResource("3_qji5t")
 [node name="InventorySlot5" type="Panel" parent="InventorySlots" unique_id=1670890676]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qq4uu")
 
 [node name="TextureRect" type="TextureRect" parent="InventorySlots/InventorySlot5" unique_id=471116252]
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
+stretch_mode = 5
 
 [node name="Highlight" type="TextureRect" parent="InventorySlots/InventorySlot5" unique_id=1439459287]
 visible = false

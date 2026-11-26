@@ -9,6 +9,7 @@ script = ExtResource("2_qoyyq")
 item_ID = 2
 item_name = "Apple"
 path_to_scene = "res://scenes/Apple.tscn"
+throwable = true
 metadata/_custom_type_script = "uid://bcw1wigdrttht"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qoyyq"]

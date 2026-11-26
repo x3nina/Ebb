@@ -8,23 +8,24 @@
 script = ExtResource("3_cu2ha")
 item_name = "Bananna"
 path_to_scene = "res://scenes/bannana.tscn"
+throwable = true
 metadata/_custom_type_script = "uid://bcw1wigdrttht"
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vphp3"]
-radius = 16.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_5s2m6"]
+radius = 12.0415945
 
-[node name="Bannana" type="Area2D" unique_id=1440496427]
+[node name="Bananna" type="Area2D" unique_id=1440496427]
 collision_mask = 2
 script = ExtResource("1_03ie7")
 item = SubResource("Resource_cu2ha")
 
 [node name="SpriteIcon" type="Sprite2D" parent="." unique_id=1200569205]
+position = Vector2(2, 1)
 texture = ExtResource("1_cq0cx")
 region_enabled = true
 region_rect = Rect2(134, 7, 64, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1527151940]
-position = Vector2(-10, 3)
-shape = SubResource("CircleShape2D_vphp3")
+shape = SubResource("CircleShape2D_5s2m6")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

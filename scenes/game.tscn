@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://da66p8lt38se4" path="res://assets/tiles_sprite.png" id="3_lbhrr"]
 [ext_resource type="Script" uid="uid://6vpmau2gu6c0" path="res://scripts/test_dual_grid.gd" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://d03jffnkx4xnx" path="res://scenes/bannana.tscn" id="5_iywne"]
-[ext_resource type="PackedScene" uid="uid://b8qqby5ebiiym" path="res://scenes/Apple.tscn" id="6_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://b2rdb3ooqbg2m" path="res://scenes/inventory_screen.tscn" id="6_p57ef"]
-[ext_resource type="PackedScene" uid="uid://nuf0mx1axldv" path="res://scenes/bottle.tscn" id="7_vtaks"]
-[ext_resource type="PackedScene" uid="uid://inlud6kq2kw2" path="res://scenes/can.tscn" id="8_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://b8qqby5ebiiym" path="res://scenes/Apple.tscn" id="7_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://nuf0mx1axldv" path="res://scenes/bottle.tscn" id="8_vtaks"]
+[ext_resource type="PackedScene" uid="uid://inlud6kq2kw2" path="res://scenes/can.tscn" id="9_kvpfn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
 texture = ExtResource("3_lbhrr")
@@ -657,28 +657,49 @@ script = ExtResource("4_lbhrr")
 script = ExtResource("2_lnu2h")
 tile_set = SubResource("TileSet_yqjtg")
 
-[node name="Bannana" parent="TestDualGrid" unique_id=1440496427 instance=ExtResource("5_iywne")]
-position = Vector2(374, 217)
-
-[node name="Bannana2" parent="TestDualGrid" unique_id=1334331056 instance=ExtResource("5_iywne")]
-position = Vector2(664, 261)
-
-[node name="Apple" parent="TestDualGrid" unique_id=248288143 instance=ExtResource("6_0tnpc")]
-position = Vector2(634, 455)
-
-[node name="Can" parent="TestDualGrid" unique_id=1548977245 instance=ExtResource("8_kvpfn")]
-position = Vector2(360, 400)
-
-[node name="Can2" parent="TestDualGrid" unique_id=1593582483 instance=ExtResource("8_kvpfn")]
-position = Vector2(785, 140)
-
-[node name="Can3" parent="TestDualGrid" unique_id=257883342 instance=ExtResource("8_kvpfn")]
-position = Vector2(443, 509)
-
-[node name="Bottle" parent="TestDualGrid" unique_id=1999502804 instance=ExtResource("7_vtaks")]
-position = Vector2(264, 474)
-
 [node name="User interface" type="CanvasLayer" parent="." unique_id=23504465]
 
 [node name="InventoryScreen" parent="User interface" unique_id=605690316 groups=["inventoryUI"] instance=ExtResource("6_p57ef")]
 position = Vector2(601, 493)
+
+[node name="Bananna2" parent="." unique_id=1722657374 instance=ExtResource("5_iywne")]
+position = Vector2(267, 363)
+
+[node name="Bananna" parent="." unique_id=1440496427 instance=ExtResource("5_iywne")]
+position = Vector2(305, 274)
+
+[node name="Bottle2" parent="." unique_id=1723806087 instance=ExtResource("8_vtaks")]
+position = Vector2(610, 242)
+
+[node name="Bananna3" parent="." unique_id=115236495 instance=ExtResource("5_iywne")]
+position = Vector2(451, 159)
+
+[node name="Apple" parent="." unique_id=1493203863 instance=ExtResource("7_0tnpc")]
+position = Vector2(561, 364)
+
+[node name="Bottle" parent="." unique_id=870878273 instance=ExtResource("8_vtaks")]
+position = Vector2(763, 353)
+
+[node name="Can" parent="." unique_id=916875688 instance=ExtResource("9_kvpfn")]
+position = Vector2(475, 439)
+
+[node name="Can2" parent="." unique_id=237462666 instance=ExtResource("9_kvpfn")]
+position = Vector2(221, 481)
+
+[node name="Bananna4" parent="." unique_id=1294735070 instance=ExtResource("5_iywne")]
+position = Vector2(668, 460)
+
+[node name="Bottle3" parent="." unique_id=1177109883 instance=ExtResource("8_vtaks")]
+position = Vector2(362, 465)
+
+[node name="Can3" parent="." unique_id=164774637 instance=ExtResource("9_kvpfn")]
+position = Vector2(468, 272)
+
+[node name="Can4" parent="." unique_id=1162540349 instance=ExtResource("9_kvpfn")]
+position = Vector2(622, 93)
+
+[node name="Can5" parent="." unique_id=16154705 instance=ExtResource("9_kvpfn")]
+position = Vector2(785, 196)
+
+[node name="Can6" parent="." unique_id=447616634 instance=ExtResource("9_kvpfn")]
+position = Vector2(191, 315)

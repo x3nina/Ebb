@@ -58,6 +58,12 @@ down={
 ]
 }
 
+[layer_names]
+
+2d_render/layer_1="walls"
+2d_render/layer_2="player"
+2d_render/layer_3="items"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
