@@ -293,4 +293,4 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_5nemx")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.3075802
+frame_progress = 0.45343634
