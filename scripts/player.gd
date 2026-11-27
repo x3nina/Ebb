@@ -2,8 +2,6 @@ extends CharacterBody2D
 
 const SPEED = 400.0
 
-var last_direction = 0
-
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
@@ -19,11 +17,16 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.flip_h = false
 		animated_sprite.play("idle")
 	else:
-		# flip sprite left & right
-		if direction.x != 0:
-			last_direction = direction.x
-		animated_sprite.flip_h = last_direction < 0
-		animated_sprite.play("moving")
+		if direction.y > 0 && direction.x == 0:
+			animated_sprite.play("walk_down")
+		elif direction.y < 0 && direction.x == 0:
+			animated_sprite.play("walk_up")
+		else:
+			# flip sprite left & right
+			if direction.x > 0:
+				animated_sprite.play("walk_right")
+			if direction.x < 0:
+				animated_sprite.play("walk_left")
 		
 	
 	velocity = direction * SPEED
